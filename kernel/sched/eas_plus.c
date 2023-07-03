@@ -206,7 +206,7 @@ int select_max_spare_capacity(struct task_struct *p, int target)
  * cpu id or
  * -1 if target CPU is not found
  */
-void find_best_idle_cpu(struct task_struct *p, bool prefer_idle)
+int find_best_idle_cpu(struct task_struct *p, bool prefer_idle)
 {
 	int iter_cpu;
 	int best_idle_cpu = -1;

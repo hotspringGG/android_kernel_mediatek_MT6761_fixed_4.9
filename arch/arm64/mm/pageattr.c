@@ -18,6 +18,8 @@
 
 #include <asm/pgtable.h>
 #include <asm/tlbflush.h>
+#include <mt-plat/aee.h>
+#include <mt-plat/mtk_meminfo.h>
 
 struct page_change_data {
 	pgprot_t set_mask;

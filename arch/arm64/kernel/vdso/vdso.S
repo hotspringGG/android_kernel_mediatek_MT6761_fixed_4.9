@@ -20,7 +20,7 @@
 #include <linux/linkage.h>
 #include <linux/const.h>
 #include <asm/page.h>
-
+//#include <mt-plat/aee.h>
 	.globl vdso_start, vdso_end
 	.section .rodata
 	.balign PAGE_SIZE

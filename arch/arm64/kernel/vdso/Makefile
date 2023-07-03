@@ -14,8 +14,14 @@ obj-vdso := $(addprefix $(obj)/, $(obj-vdso))
 ccflags-y := -shared -fno-common -fno-builtin
 ccflags-y += -nostdlib -Wl,-soname=linux-vdso.so.1 \
 		$(call cc-ldoption, -Wl$(comma)--hash-style=sysv)
+
+######
 ccflags-y += $(DISABLE_LTO)
-ccflags-y += -q
+
+CFLAGS_REMOVE_vgettimeofday.o += $(CC_FLAGS_SCS)
+######
+
+
 # Disable gcov profiling for VDSO code
 GCOV_PROFILE := n
 
