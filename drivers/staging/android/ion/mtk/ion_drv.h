@@ -15,10 +15,11 @@
 #define __ION_DRV_H__
 #include <linux/version.h>
 
-#include <ion.h>
+#include <config/ion.h>
 
 #define BACKTRACE_SIZE 10
-
+//typedef int ion_user_handle_t;
+#include "../ion.h"
 /* Structure definitions */
 
 enum ION_CMDS {
